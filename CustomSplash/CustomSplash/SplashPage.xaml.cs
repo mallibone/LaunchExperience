@@ -28,9 +28,9 @@ namespace CustomSplash
 
             // animate the splash logo
             var scaleTarget = 100.0;
-            await SplashIcon.ScaleTo(0.5, 400, Easing.CubicInOut);
+            await SplashIcon.ScaleTo(0.5, 500, Easing.CubicInOut);
             var animationTasks = new[]{
-                SplashIcon.ScaleTo(scaleTarget, 700, Easing.CubicInOut),
+                SplashIcon.ScaleTo(scaleTarget, 1000, Easing.CubicInOut),
                 SplashIcon.FadeTo(0, 700, Easing.CubicInOut)
             };
             await Task.WhenAll(animationTasks);
