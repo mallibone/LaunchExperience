@@ -24,13 +24,12 @@ namespace CustomSplash
         private async void ScaleIcon()
         {
             // wait until the UI is present
-            await Task.Delay(100);
+            await Task.Delay(300);
 
             // animate the splash logo
-            var scaleTarget = 100.0;
             await SplashIcon.ScaleTo(0.5, 500, Easing.CubicInOut);
             var animationTasks = new[]{
-                SplashIcon.ScaleTo(scaleTarget, 1000, Easing.CubicInOut),
+                SplashIcon.ScaleTo(100.0, 1000, Easing.CubicInOut),
                 SplashIcon.FadeTo(0, 700, Easing.CubicInOut)
             };
             await Task.WhenAll(animationTasks);
