@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CustomSplash.SplashPage"
@@ -6,9 +6,10 @@
     <ContentPage.Content>
         <Grid>
             <Image x:Name="SplashIcon"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center">
-                <Image.Source>
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   Aspect="AspectFit" Source="SplashScreen.png" />
+<!--                <Image.Source>
                     <OnPlatform x:TypeArguments="ImageSource">
                         <On Platform="UWP">
                             <FileImageSource File="Assets/SplashScreen.png" />
@@ -19,6 +20,6 @@
                     </OnPlatform>
                 </Image.Source>
             </Image>
-        </Grid>
+-->        </Grid>
     </ContentPage.Content>
 </ContentPage>
