@@ -11,11 +11,8 @@ namespace CustomSplash
         {
             InitializeComponent();
 
-            var splashPage = new SplashPage();
-            var mainPage = new NavigationPage(splashPage) { BarBackgroundColor = Color.FromHex("#2196F3")};
-
-            //NavigationPage.SetHasNavigationBar(this, false);
-            MainPage = mainPage;
+            var splashPage = new SplashPage(() => MainPage = new MainPage());
+            MainPage = splashPage;
         }
 
         protected override void OnStart()
