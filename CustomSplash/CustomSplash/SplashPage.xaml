@@ -6,10 +6,9 @@
     <ContentPage.Content>
         <Grid>
             <Image x:Name="SplashIcon"
-                   HorizontalOptions="CenterAndExpand"
-                   VerticalOptions="CenterAndExpand"
-                   Aspect="AspectFit" Source="SplashScreen.png" />
-<!--                <Image.Source>
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center">
+                <Image.Source>
                     <OnPlatform x:TypeArguments="ImageSource">
                         <On Platform="UWP">
                             <FileImageSource File="Assets/SplashScreen.png" />
@@ -20,6 +19,6 @@
                     </OnPlatform>
                 </Image.Source>
             </Image>
--->        </Grid>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

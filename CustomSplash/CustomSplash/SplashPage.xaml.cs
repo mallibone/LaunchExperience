@@ -16,8 +16,8 @@ namespace CustomSplash
 
         protected override void OnAppearing()
         {
-            base.OnAppearing();
             NavigationPage.SetHasNavigationBar(this, false);
+            base.OnAppearing();
             ScaleIcon();
         }
 
