@@ -9,17 +9,14 @@ namespace CustomSplash
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SplashPage : ContentPage
     {
-        private readonly Action _onAnimationCompleted;
-
-        public SplashPage(Action onAnimationCompleted)
+        public SplashPage()
         {
             InitializeComponent();
-            _onAnimationCompleted = onAnimationCompleted;
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         protected override void OnAppearing()
         {
-            NavigationPage.SetHasNavigationBar(this, false);
             base.OnAppearing();
             ScaleIcon();
         }
@@ -37,10 +34,9 @@ namespace CustomSplash
             };
             await Task.WhenAll(animationTasks);
 
-            _onAnimationCompleted();
             //// navigate to main page
-            //Navigation.InsertPageBefore(new MainPage(), Navigation.NavigationStack[0]);
-            //await Navigation.PopToRootAsync(false);
+            Navigation.InsertPageBefore(new MainPage(), Navigation.NavigationStack[0]);
+            await Navigation.PopToRootAsync(false);
         }
     }
 }

@@ -11,7 +11,7 @@ namespace CustomSplash
         {
             InitializeComponent();
 
-            var splashPage = new SplashPage(() => MainPage = new MainPage());
+            var splashPage = new NavigationPage(new SplashPage());
             MainPage = splashPage;
         }
 
